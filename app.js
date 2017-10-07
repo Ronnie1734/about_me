@@ -14,7 +14,7 @@ console.log(answer);
 
 if(answer === 'yes' || answer === 'Y') {
   userPoints++;
-  alert('Correct! He loves Mexican food. ' + 'You have ' + userPoints + ' point.');
+  alert('Correct! He loves Mexican food. ' + 'You have ' + userPoints + ' points.');
 } else {
   alert('Wrong! He loves Mexican food. ' + 'You have ' + userPoints + ' points.');
 }
@@ -63,24 +63,79 @@ if(answer4 === 'yes' || answer4 === 'Y') {
   alert( 'Wrong! Ronnie did work with at risk youth for eight years and he really enjoyed it!' + ' After Question #5 you have ' + userPoints + ' points');
 }
 
+//Question6
+var answer5 = 24;
+var userGuess;
+for ( var i = 0; i < 4; i++ ) {
+  userGuess = prompt(' In high school Ronnie did track and field, and one of the events he participated in was the long jump. The world record for the long jump is held my Mike Powell at 29 ft 4 1/4 in for men and Galina Chistyakova holds the record for women at 24 ft 8 in. How long do you think Ronnie jumped rounded to the nearest foot? ');
+  console.log('User guesses' + userGuess);
+  userGuess = parseInt(userGuess); //Answer must be an integer or it won't be accepting
+  if (userGuess === answer5) {
+    userPoints++;
+    alert( 'Correct! The value entered was 24 ft. However, Ronnie only jumped 23 ft. 10 in., but 24ft sounds better!' + ' After Question #6 you have ' + userPoints + ' points');
+    i = 20;
+  } else if (userGuess > answer5 ) {
+    console.log('The user has answered greater than answer5.' + userGuess);
+    alert('That answer is a bit high....');
 
-/*'use strict';
+  } else if (userGuess < answer5 ){
+    console.log('The user has answered lower than answer5.' + userGuess);
+    alert('That answer is a little low...');
 
-var userPoints = 0;
-
-console.log('hello yawllll');
-alert('Welcome to my guessing game!');
-
-var user = prompt('What is your name?');
-alert('Hi ' + user + '! I am so glad you want to play my game.');
-
-var answer = prompt('Is Rachel\'s favorite food kimchi? Type yes or no.').toLowerCase();
-console.log(answer);
-
-if(answer === 'yes' || answer === 'Y') {
-  userPoints++;
-} else {
-  alert('Wrong! Actually, I like awwlllllll spicy food.');
+  }
+}
+if (i === 4) {
+  alert ('None of your answers were right... The correct anser is 24 ft. However, Ronnie only jumped 23 ft. 10 in., but 24ft sounds better!' + ' After Question #6 you have ' + userPoints + ' points');
 }
 
-alert('you have ' + userPoints + ' points.'); */
+//Question6
+var favSeries = ['rome', 'shameless', 'heroes', 'dexter'];
+var userGuess2;
+for ( var j = 0; j < 6; j++) {
+  userGuess2 = prompt( 'Ronnie watches a lot of series and actually prefers those over monvies. What do you think his favorite series is? ');
+  console.log('user guesses' + userGuess2);
+  if ( favSeries.indexOf(userGuess2.toLowerCase()) > -1 ) {
+    userPoints++;
+    alert('Correct! You must like this show as much as me.' + 'After question #7 you have ' + userPoints + ' out of 7. My favorite series are Rome, Shameless, Heroes, and Dexter.');
+    j = 20;
+  } else {
+    alert(' Cool show, but not one of my favorites... Guess again!');
+  }
+}
+
+if (j === 6) {
+  alert(' It looks like your idea of a good series is a little different from mine... My favorite series are Rome, Shameless, Heroes, and Dexter.' + favSeries);
+}
+// console.log(i);
+// if (i = 4) {
+//   alert ('None of your answers were right... The correct anser is 24 ft. However, Ronnie only jumped 23 ft. 10 in., but 24ft sounds better!' + ' After Question #6 you have ' + userPoints + ' points');
+// }
+// console.log(i);
+//   if (x > 5) {
+//  /* do the right thing */
+// } else if (x > 50) {
+//  /* do the right thing */
+// } else {
+//  /* do the right thing */
+// }
+//Question6
+//  'use strict';
+//
+// var userPoints = 0;
+//
+// console.log('hello yawllll');
+// alert('Welcome to my guessing game!');
+//
+// var user = prompt('What is your name?');
+// alert('Hi ' + user + '! I am so glad you want to play my game.');
+//
+// var answer = prompt('Is Rachel\'s favorite food kimchi? Type yes or no.').toLowerCase();
+// console.log(answer);
+//
+// if(answer === 'yes' || answer === 'Y') {
+//   userPoints++;
+// } else {
+//   alert('Wrong! Actually, I like awwlllllll spicy food.');
+// }
+//
+// alert('you have ' + userPoints + ' points.');
