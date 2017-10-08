@@ -3,13 +3,22 @@
   background-color: yellow;
 }
 
-<h1> {
+ h1 {
   color: black;
 }
 
+#heading-text {
+  padding: 200px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .2);
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+}
 
 
-
-body {
-    background-image: url("http://guoguiyan.com/classic-wallpapers/70306471.html");
+.heading {
+    background-image: url("img/70306471-classic-wallpapers.jpg");
+    background-position: center;
+    background-attachment: fixed;
 }
